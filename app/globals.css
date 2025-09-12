@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+    --color-primary-bg: #022B3A;
+    --color-primary-dark: #011921;
+    --color-primary-light: #0A3D52;
+    --color-accent: #E8AA14;
+    --color-accent-light: #FFD700;
+    --color-accent-dark: #C89200;
+    --color-text-primary: #DEF6FF;
+    --color-text-secondary: rgba(222, 246, 255, 0.8);
+    --color-text-accent: #E8AA14;
+    --color-surface-glass: rgba(255, 255, 255, 0.05);
+    --color-surface-glass-hover: rgba(255, 255, 255, 0.10);
+    --color-surface-border: rgba(232, 170, 20, 0.2);
+    --color-surface-border-hover: rgba(232, 170, 20, 0.4);
+    
+    /* Spacing */
+    --spacing-section: 6rem;
+    --spacing-container: 1200px;
+    --spacing-container-padding: 1rem;
+    
+    /* Typography */
+    --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+    --font-size-hero-mobile: 2.5rem;
+    --font-size-hero-desktop: 4.5rem;
+    --font-size-section-title: 2.5rem;
+    --font-size-card-title: 1.25rem;
+    
+    /* Animation */
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 600ms;
+    --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 10px 20px rgba(232, 170, 20, 0.3);
+    --shadow-glow: 0 0 20px rgba(232, 170, 20, 0.5);
+    
+    /* Border Radius */
+    --border-radius-card: 1rem;
+    --border-radius-button: 50px;
+    
+    /* Z-Index */
+    --z-header: 50;
+    --z-modal: 100;
+    --z-tooltip: 200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary-bg text-text-primary;
+    font-family: var(--font-family-sans);
+  }
+
+  ::selection {
+    @apply bg-accent text-primary-bg;
+  }
+
+  /* Fix scroll offset for fixed header */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(232, 170, 20, 0.5);
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(232, 170, 20, 0.7);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-surface-glass backdrop-blur-sm border border-surface-border;
+  }
+
+  .hover-glow {
+    @apply hover:shadow-card-hover transition-all duration-normal;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}

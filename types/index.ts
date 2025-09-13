@@ -33,7 +33,7 @@ export interface Activity {
   id: string
   title: string
   description: string
-  icon?: React.ComponentType<{ size?: number }>
+  icon?: React.ComponentType<any>
 }
 
 export interface SocialLink {

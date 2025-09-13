@@ -51,7 +51,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
 }
 
 // HOC for creating lazy sections
-export function createLazySection<P extends object>(
+export function createLazySection<P extends Record<string, any>>(
   importFn: () => Promise<{ default: React.ComponentType<P> }>,
   fallback?: React.ReactNode
 ) {
@@ -59,7 +59,7 @@ export function createLazySection<P extends object>(
   
   return (props: P) => (
     <LazySection fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as any)} />
     </LazySection>
   )
 }

@@ -1,4 +1,5 @@
-// Theme configuration - Single source of truth for all design tokens
+// Theme configuration - Single source of truth for design tokens
+// Used to generate CSS variables in globals.css
 export const theme = {
   colors: {
     primary: {
@@ -133,7 +134,7 @@ export const cssVariables = {
   '--z-tooltip': theme.zIndex.tooltip.toString()
 } as const
 
-// Type helpers for theme values
+// Type helpers for theme values (for future use if needed)
 export type ThemeColors = typeof theme.colors
 export type ThemeSpacing = typeof theme.spacing
 export type ThemeTypography = typeof theme.typography

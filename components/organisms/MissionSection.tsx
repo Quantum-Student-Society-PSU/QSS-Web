@@ -5,7 +5,7 @@ import { Container } from '@/components/atoms/Container'
 import { H2, H3, P } from '@/components/atoms/Typography'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Users, Zap, Lightbulb, BookOpen, Target } from 'lucide-react'
+import { Users, Zap, BookOpen } from 'lucide-react'
 
 export const MissionSection: React.FC = () => {
   const { ref, inView } = useInView({
@@ -13,23 +13,6 @@ export const MissionSection: React.FC = () => {
     triggerOnce: true,
   })
 
-  const highlights = [
-    {
-      icon: <Users size={32} />,
-      title: 'Diverse Backgrounds',
-      description: 'Physics, engineering, math, and computer science students united by quantum curiosity',
-    },
-    {
-      icon: <Lightbulb size={32} />,
-      title: 'Making Complex Simple',
-      description: 'We make big ideas in quantum science feel a little more down-to-earth',
-    },
-    {
-      icon: <Target size={32} />,
-      title: 'Future Ready',
-      description: 'Growing as a community to prepare for the future of quantum technology',
-    },
-  ]
 
   const pillars = [
     {
@@ -103,24 +86,6 @@ export const MissionSection: React.FC = () => {
               </P>
             </motion.div>
 
-            {/* Highlights Grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
-              {highlights.map((highlight, index) => (
-                <motion.div
-                  key={highlight.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="text-center p-6 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/30 transition-all duration-300"
-                >
-                  <div className="inline-flex p-4 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl text-accent mb-4">
-                    {highlight.icon}
-                  </div>
-                  <H3 className="text-lg mb-3 text-accent">{highlight.title}</H3>
-                  <P className="text-sm text-text-secondary leading-relaxed">{highlight.description}</P>
-                </motion.div>
-              ))}
-            </div>
           </div>
 
           {/* Mission Pillars */}

@@ -50,15 +50,15 @@ export const MissionSection: React.FC = () => {
   ]
 
   return (
-    <section id="mission" className="relative py-40 bg-gradient-to-br from-primary-bg via-primary-dark/90 to-primary-bg overflow-hidden border-t-2 border-accent/20">
+    <section id="mission" className="relative py-section-mobile sm:py-32 lg:py-40 bg-gradient-to-br from-primary-bg via-primary-dark/90 to-primary-bg overflow-hidden border-t-2 border-accent/20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,170,20,0.05),transparent_70%)]" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-light/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-accent-light/5 rounded-full blur-3xl" />
       
-      {/* Geometric shapes - Top Right and Bottom Left */}
-      <div className="absolute top-20 right-20 w-32 h-32 border border-accent/10 rotate-45 rounded-lg"></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 border border-accent-light/10 rotate-12 rounded-lg"></div>
+      {/* Geometric shapes - responsive positioning */}
+      <div className="absolute top-4 right-4 sm:top-10 sm:right-10 lg:top-20 lg:right-20 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 border border-accent/10 rotate-45 rounded-lg hidden sm:block"></div>
+      <div className="absolute bottom-4 left-4 sm:bottom-10 sm:left-10 lg:bottom-20 lg:left-20 w-12 h-12 sm:w-18 sm:h-18 lg:w-24 lg:h-24 border border-accent-light/10 rotate-12 rounded-lg hidden sm:block"></div>
       
       <Container>
         <motion.div
@@ -72,7 +72,7 @@ export const MissionSection: React.FC = () => {
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <H2 className="text-center mb-16 text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+            <H2 className="text-center mb-12 sm:mb-16 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
               About Us
             </H2>
           </motion.div>
@@ -85,26 +85,26 @@ export const MissionSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16"
             >
-              <P className="text-xl md:text-2xl leading-relaxed mb-8 font-light">
+              <P className="text-lg sm:text-xl md:text-2xl leading-relaxed mb-6 sm:mb-8 font-light">
                 We're the <span className="text-accent font-semibold">Quantum Student Society (QSS)</span> at Penn State, 
                 a group of students curious about all things quantum. From physics and engineering to math and computer science, 
                 we come from different backgrounds but share the same energy and enthusiasm to explore the quantum world together.
               </P>
               
-              <P className="text-lg md:text-xl leading-relaxed mb-8 text-text-secondary">
+              <P className="text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 text-text-secondary">
                 We host talks, lectures, and projects that make big ideas in quantum science feel a little more down-to-earth. 
                 QSS is a space to learn, collaborate, and connect, whether you're deep into research or just starting to wonder 
                 what <span className="text-accent font-medium">"quantum"</span> really means.
               </P>
               
-              <P className="text-lg md:text-xl leading-relaxed text-text-secondary">
+              <P className="text-base sm:text-lg md:text-xl leading-relaxed text-text-secondary">
                 At the end of the day, we're here to grow as a community and help each other get ready for the 
                 <span className="text-accent font-medium"> future of quantum tech</span>.
               </P>
             </motion.div>
 
             {/* Highlights Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-20">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
               {highlights.map((highlight, index) => (
                 <motion.div
                   key={highlight.title}
@@ -129,8 +129,8 @@ export const MissionSection: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <H3 className="text-center mb-12 text-2xl md:text-3xl font-bold text-accent">Our Mission Pillars</H3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <H3 className="text-center mb-8 sm:mb-12 text-xl sm:text-2xl md:text-3xl font-bold text-accent">Our Mission Pillars</H3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {pillars.map((pillar, index) => (
                 <motion.div
                   key={pillar.title}

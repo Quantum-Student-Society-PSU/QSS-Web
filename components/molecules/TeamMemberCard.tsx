@@ -26,7 +26,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, index })
         scale: 1.02,
         transition: { duration: 0.3 }
       }}
-      className="group relative text-center p-8 bg-gradient-to-br from-surface-glass via-transparent to-surface-glass backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/30 transition-all duration-300 overflow-hidden min-h-[280px] flex flex-col"
+      className="group relative text-center p-4 sm:p-6 md:p-8 bg-gradient-to-br from-surface-glass via-transparent to-surface-glass backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/30 transition-all duration-300 overflow-hidden min-h-[240px] sm:min-h-[280px] flex flex-col"
     >
       {/* Animated background gradient */}
       <motion.div

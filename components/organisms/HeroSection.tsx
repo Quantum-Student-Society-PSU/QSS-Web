@@ -19,25 +19,25 @@ export const HeroSection: React.FC = () => {
   }, [])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden" style={{ scrollMarginTop: '0' }}>
+    <section id="home" className="relative min-h-screen flex items-center pt-16 sm:pt-20 px-4 sm:px-0 overflow-hidden" style={{ scrollMarginTop: '0' }}>
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-bg via-primary-dark/50 to-primary-bg">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]" />
       </div>
 
-      {/* Floating particles */}
+      {/* Floating particles - reduced for mobile */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-accent/30 rounded-full"
+            className="absolute w-1 h-1 bg-accent/30 rounded-full hidden md:block"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
             }}
             animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
             }}
             transition={{
               duration: Math.random() * 20 + 10,
@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
               transition={{ duration: 1, delay: 0.2 }}
               className="mb-6"
             >
-              <H1 className="mb-4 text-5xl md:text-7xl font-bold">
+              <H1 className="mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
                 <span className="inline-block bg-gradient-to-r from-accent via-accent-light to-indigo-400 bg-clip-text text-transparent animate-gradient bg-300%">
                   Quantum
                 </span>
@@ -79,8 +79,8 @@ export const HeroSection: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-2xl md:text-3xl text-accent mb-4 font-light">Penn State University</p>
-              <Lead className="mb-8 text-lg md:text-xl max-w-2xl text-text-secondary">
+              <p className="text-xl sm:text-2xl md:text-3xl text-accent mb-4 font-light">Penn State University</p>
+              <Lead className="mb-8 text-base sm:text-lg md:text-xl max-w-2xl text-text-secondary">
                 A group of students curious about all things quantum — from physics and computing to the future of technology
               </Lead>
             </motion.div>
@@ -123,9 +123,9 @@ export const HeroSection: React.FC = () => {
         </div>
       </Container>
 
-      {/* Floating particles */}
+      {/* Floating particles - responsive count */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(60)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
             className="absolute w-1 h-1 bg-amber-400 rounded-full"

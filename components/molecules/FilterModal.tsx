@@ -24,33 +24,28 @@ export const FilterModal: React.FC<FilterModalProps> = ({
 }) => {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const scrollPositionRef = useRef<number>(0)
 
-  // Lock body scroll when modal is open
+  // Lock body scroll when modal is open and preserve scroll position
   useEffect(() => {
     if (isOpen) {
       // Save current scroll position
-      const scrollY = window.scrollY
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
+      scrollPositionRef.current = window.scrollY
+      
+      // Prevent body scroll
       document.body.style.overflow = 'hidden'
     } else {
-      // Restore scroll position
-      const scrollY = document.body.style.top
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.width = ''
+      // Restore scroll position and body scroll
       document.body.style.overflow = ''
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
-      }
+      
+      // Use setTimeout to ensure the modal animation completes before scrolling
+      setTimeout(() => {
+        window.scrollTo(0, scrollPositionRef.current)
+      }, 100)
     }
 
     // Cleanup on unmount
     return () => {
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.width = ''
       document.body.style.overflow = ''
     }
   }, [isOpen])

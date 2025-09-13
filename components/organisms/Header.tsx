@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
   const navItems = [
     { href: '#home', label: 'Home' },
     { href: '#mission', label: 'About Us' },
-    { href: '#what-we-do', label: 'What We Do' },
+    { href: '#activities', label: 'Activities' },
     { href: '#events', label: 'Events' },
     { href: '#team', label: 'Team' },
   ]

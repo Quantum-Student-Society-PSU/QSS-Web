@@ -20,14 +20,17 @@
     --color-surface-border-hover: rgba(232, 170, 20, 0.4);
     
     /* Spacing */
-    --spacing-section: 6rem;
+    --spacing-section: 4rem;
+    --spacing-section-mobile: 2.5rem;
     --spacing-container: 1200px;
     --spacing-container-padding: 1rem;
     
     /* Typography */
     --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
-    --font-size-hero-mobile: 2.5rem;
+    --font-size-hero-mobile: 2rem;
+    --font-size-hero-tablet: 2.5rem;
     --font-size-hero-desktop: 4.5rem;
+    --font-size-section-title-mobile: 1.875rem;
     --font-size-section-title: 2.5rem;
     --font-size-card-title: 1.25rem;
     

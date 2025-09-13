@@ -85,15 +85,15 @@ export const EventsSection: React.FC = () => {
   }
 
   return (
-    <section id="events" className="relative py-40 bg-gradient-to-br from-primary-bg via-primary-dark/60 to-primary-bg overflow-hidden border-t-2 border-accent/20">
+    <section id="events" className="relative py-section-mobile sm:py-32 lg:py-40 bg-gradient-to-br from-primary-bg via-primary-dark/60 to-primary-bg overflow-hidden border-t-2 border-accent/20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(232,170,20,0.06),transparent_60%)]" />
-      <div className="absolute top-1/4 left-10 w-48 h-48 bg-accent/6 rounded-full blur-2xl" />
-      <div className="absolute bottom-1/4 right-10 w-48 h-48 bg-accent-light/6 rounded-full blur-2xl" />
+      <div className="absolute top-1/4 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 bg-accent/6 rounded-full blur-2xl" />
+      <div className="absolute bottom-1/4 right-4 sm:right-10 w-32 h-32 sm:w-48 sm:h-48 bg-accent-light/6 rounded-full blur-2xl" />
       
-      {/* Geometric shapes - Top Left and Bottom Right */}
-      <div className="absolute top-20 left-20 w-32 h-32 border border-accent/10 rotate-45 rounded-lg"></div>
-      <div className="absolute bottom-20 right-20 w-24 h-24 border border-accent-light/10 rotate-12 rounded-lg"></div>
+      {/* Geometric shapes - responsive positioning */}
+      <div className="absolute top-4 left-4 sm:top-10 sm:left-10 lg:top-20 lg:left-20 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 border border-accent/10 rotate-45 rounded-lg hidden sm:block"></div>
+      <div className="absolute bottom-4 right-4 sm:bottom-10 sm:right-10 lg:bottom-20 lg:right-20 w-12 h-12 sm:w-18 sm:h-18 lg:w-24 lg:h-24 border border-accent-light/10 rotate-12 rounded-lg hidden sm:block"></div>
       <Container>
         <motion.div
           ref={ref}
@@ -101,7 +101,7 @@ export const EventsSection: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <H2 className="text-center mb-6 text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+          <H2 className="text-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
             Events
           </H2>
           <motion.div
@@ -110,7 +110,7 @@ export const EventsSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-12 max-w-4xl mx-auto"
           >
-            <P className="text-lg md:text-xl leading-relaxed mb-6 text-text-secondary">
+            <P className="text-base sm:text-lg md:text-xl leading-relaxed mb-6 text-text-secondary">
               QSS isn't just about theory, we <span className="text-accent font-medium">bring quantum to life</span> through events that spark curiosity and connection. 
               Our calendar is packed with opportunities to learn, share, and get inspired:
             </P>
@@ -157,7 +157,7 @@ export const EventsSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 1.0 }}
             className="text-center mt-16 p-8 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl max-w-4xl mx-auto"
           >
-            <P className="text-lg md:text-xl leading-relaxed text-text-secondary">
+            <P className="text-base sm:text-lg md:text-xl leading-relaxed text-text-secondary">
               Whether it's a <span className="text-accent font-medium">lecture hall</span>, a 
               <span className="text-accent font-medium"> lab</span>, or just a 
               <span className="text-accent font-medium"> whiteboard session late at night</span>, our events are 

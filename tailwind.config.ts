@@ -37,12 +37,15 @@ const config: Config = {
       },
       fontSize: {
         'hero-mobile': 'var(--font-size-hero-mobile)',
+        'hero-tablet': 'var(--font-size-hero-tablet)',
         'hero-desktop': 'var(--font-size-hero-desktop)',
+        'section-title-mobile': 'var(--font-size-section-title-mobile)',
         'section-title': 'var(--font-size-section-title)',
         'card-title': 'var(--font-size-card-title)',
       },
       spacing: {
         'section': 'var(--spacing-section)',
+        'section-mobile': 'var(--spacing-section-mobile)',
         'container-padding': 'var(--spacing-container-padding)',
       },
       maxWidth: {

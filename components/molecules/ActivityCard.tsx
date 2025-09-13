@@ -28,7 +28,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity, index }) =
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="group relative p-8 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/50 transition-all duration-300 hover:shadow-card-hover overflow-hidden"
+      className="group relative p-4 sm:p-6 md:p-8 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/50 transition-all duration-300 hover:shadow-card-hover overflow-hidden"
     >
       {/* Gradient overlay on hover */}
       <motion.div

@@ -18,7 +18,15 @@ export interface Event {
   time: string
   location: string
   description: string
+  type: 'speaker' | 'collab' | 'showcase' | 'networking' | 'gbm'
   link?: string
+}
+
+export interface EventType {
+  id: string
+  type: 'speaker' | 'collab' | 'showcase' | 'networking' | 'gbm'
+  title: string
+  description: string
 }
 
 export interface Activity {

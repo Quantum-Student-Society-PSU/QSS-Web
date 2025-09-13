@@ -6,7 +6,7 @@ import { H2 } from '@/components/atoms/Typography'
 import { ActivityCard } from '@/components/molecules/ActivityCard'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { BookOpen, Microscope, Users, Star, Code, Package } from 'lucide-react'
+import { BookOpen, Microscope, Users, Star, Code, Zap } from 'lucide-react'
 import { Activity } from '@/types'
 
 export const ActivitiesSection: React.FC = () => {
@@ -18,39 +18,27 @@ export const ActivitiesSection: React.FC = () => {
   const activities: Activity[] = [
     {
       id: '1',
-      title: 'Weekly Study Groups',
-      description: 'Collaborative learning sessions covering quantum mechanics, quantum computing algorithms, and quantum information theory',
+      title: 'Workshops & Tutorials',
+      description: 'Hands-on sessions where members learn the basics (and beyond) of quantum computing, algorithms, and hardware',
       icon: <BookOpen size={32} />,
     },
     {
       id: '2',
-      title: 'Research Projects',
-      description: 'Student-led research initiatives in quantum algorithms, quantum cryptography, and quantum simulation',
+      title: 'Research & Projects (Planning)',
+      description: 'Student-led collaborations exploring everything from quantum algorithms to simulations and experimental setups',
       icon: <Microscope size={32} />,
     },
     {
       id: '3',
-      title: 'Guest Speaker Series',
-      description: 'Monthly talks by leading researchers and industry experts in quantum technologies',
+      title: 'Community Outreach',
+      description: 'Sharing our love for quantum with the broader community through demos, events, and STEM outreach',
       icon: <Users size={32} />,
     },
     {
       id: '4',
-      title: 'Hackathons & Competitions',
-      description: 'Participate in quantum computing challenges and compete with teams from around the world',
-      icon: <Star size={32} />,
-    },
-    {
-      id: '5',
-      title: 'Workshop Series',
-      description: 'Hands-on workshops on quantum programming with Qiskit, Cirq, and other quantum development frameworks',
-      icon: <Code size={32} />,
-    },
-    {
-      id: '6',
-      title: 'Industry Partnerships',
-      description: 'Connect with leading quantum computing companies for internships and career opportunities',
-      icon: <Package size={32} />,
+      title: 'Hackathons & Build Nights',
+      description: 'Team up, experiment, and put ideas into action in a fast-paced, hands-on setting',
+      icon: <Zap size={32} />,
     },
   ]
 
@@ -63,7 +51,7 @@ export const ActivitiesSection: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <H2 className="text-center mb-12">What We Do</H2>
+          <H2 className="text-center mb-12">Activities</H2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((activity, index) => (

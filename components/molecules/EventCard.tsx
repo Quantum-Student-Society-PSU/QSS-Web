@@ -5,7 +5,8 @@ import { motion } from 'framer-motion'
 import { Event } from '@/types'
 import { H4, P, Small } from '@/components/atoms/Typography'
 import { cn } from '@/lib/utils'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Calendar } from 'lucide-react'
+import { downloadICSFile } from '@/lib/calendar'
 
 interface EventCardProps {
   event: Event
@@ -27,18 +28,32 @@ export const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
       </div>
       
       <div className="flex-1">
-        <H4 className="mb-2">{event.title}</H4>
-        <Small className="mb-2">{event.time} | {event.location}</Small>
-        <P className="mb-3 text-text-secondary">{event.description}</P>
-        {event.link && (
-          <a 
-            href={event.link}
-            className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
-          >
-            <span>Learn More</span>
-            <ArrowRight size={16} />
-          </a>
-        )}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div className="flex-1">
+            <H4 className="mb-2">{event.title}</H4>
+            <Small className="mb-2">{event.time} | {event.location}</Small>
+            <P className="mb-3 text-text-secondary">{event.description}</P>
+            <div className="flex flex-wrap gap-3">
+              {event.link && (
+                <a 
+                  href={event.link}
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight size={16} />
+                </a>
+              )}
+              <button
+                onClick={() => downloadICSFile(event)}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-surface-glass border border-surface-border rounded-full text-text-secondary hover:text-accent hover:border-accent transition-all duration-normal"
+                title="Add to Calendar"
+              >
+                <Calendar size={16} />
+                <span className="text-sm">Add to Calendar</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   )

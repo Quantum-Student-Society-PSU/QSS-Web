@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react'
 import { Container } from '@/components/atoms/Container'
 import { NavLink } from '@/components/molecules/NavLink'
 import { SocialLink } from '@/components/molecules/SocialLink'
-import { TwitterIcon, LinkedInIcon, InstagramIcon, EmailIcon } from '@/components/atoms/Icons'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Link2 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -23,17 +23,14 @@ export const Header: React.FC = () => {
 
   const navItems = [
     { href: '#home', label: 'Home' },
-    { href: '#mission', label: 'Mission' },
+    { href: '#mission', label: 'About Us' },
     { href: '#what-we-do', label: 'What We Do' },
     { href: '#events', label: 'Events' },
     { href: '#team', label: 'Team' },
   ]
 
   const socialLinks = [
-    { href: 'https://twitter.com', icon: <TwitterIcon />, label: 'Twitter' },
-    { href: 'https://linkedin.com', icon: <LinkedInIcon />, label: 'LinkedIn' },
-    { href: 'https://instagram.com', icon: <InstagramIcon />, label: 'Instagram' },
-    { href: 'mailto:qss@psu.edu', icon: <EmailIcon />, label: 'Email' },
+    { href: 'https://campsite.bio/psuqss', icon: <Link2 size={20} />, label: 'All Links' },
   ]
 
   return (
@@ -45,7 +42,16 @@ export const Header: React.FC = () => {
     )}>
       <Container>
         <nav className="flex items-center justify-between py-4">
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/images/logo.png"
+                alt="QSS Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-accent tracking-wider">QSS</span>
               <span className="text-xs text-text-secondary">Quantum Student Society</span>

@@ -40,15 +40,23 @@ export const MissionSection: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <H2 className="text-center mb-12">Our Mission</H2>
+          <H2 className="text-center mb-12">About Us</H2>
           
           <div className="max-w-4xl mx-auto mb-16">
             <P className="text-center text-lg md:text-xl leading-relaxed">
-              The Quantum Student Society at Penn State is dedicated to fostering a vibrant community 
-              of students passionate about quantum science and technology. We aim to bridge the gap 
-              between theoretical quantum mechanics and practical applications, providing our members 
-              with opportunities to learn, research, and innovate in one of the most exciting fields 
-              of modern science.
+              We're the Quantum Student Society (QSS) at Penn State, a group of students curious about all 
+              things quantum. From physics and engineering to math and computer science, we come from 
+              different backgrounds but share the same energy and enthusiasm to explore the quantum world 
+              together.
+            </P>
+            <P className="text-center text-lg md:text-xl leading-relaxed mt-6">
+              We host talks, lectures, and projects that make big ideas in quantum science feel a little more 
+              down-to-earth. QSS is a space to learn, collaborate, and connect, whether you're deep into 
+              research or just starting to wonder what "quantum" really means.
+            </P>
+            <P className="text-center text-lg md:text-xl leading-relaxed mt-6">
+              At the end of the day, we're here to grow as a community and help each other get ready for the 
+              future of quantum tech.
             </P>
           </div>
 

@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
             </H1>
             <p className="text-xl md:text-2xl text-accent mb-4">Penn State University</p>
             <Lead className="mb-8">
-              Exploring the frontiers of quantum physics, computing, and technology
+              A group of students curious about all things quantum
             </Lead>
             
             <div className="flex flex-wrap gap-4">

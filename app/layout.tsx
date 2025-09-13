@@ -7,19 +7,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Quantum Student Society - Penn State',
-  description: "Penn State's premier student organization dedicated to exploring quantum physics, quantum computing, and quantum technologies",
+  description: "We're the Quantum Student Society (QSS) at Penn State, a group of students curious about all things quantum",
   keywords: 'quantum, physics, computing, Penn State, PSU, student society, quantum mechanics',
   authors: [{ name: 'Quantum Student Society' }],
   openGraph: {
     title: 'Quantum Student Society - Penn State',
-    description: 'Exploring the frontiers of quantum physics, computing, and technology',
+    description: 'A group of students curious about all things quantum',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Quantum Student Society - Penn State',
-    description: 'Exploring the frontiers of quantum physics, computing, and technology',
+    description: 'A group of students curious about all things quantum',
   },
 }
 

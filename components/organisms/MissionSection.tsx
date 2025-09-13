@@ -5,7 +5,7 @@ import { Container } from '@/components/atoms/Container'
 import { H2, H3, P } from '@/components/atoms/Typography'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Users, Zap } from 'lucide-react'
+import { Shield, Users, Zap, Lightbulb, BookOpen, Target } from 'lucide-react'
 
 export const MissionSection: React.FC = () => {
   const { ref, inView } = useInView({
@@ -13,9 +13,27 @@ export const MissionSection: React.FC = () => {
     triggerOnce: true,
   })
 
+  const highlights = [
+    {
+      icon: <Users size={32} />,
+      title: 'Diverse Backgrounds',
+      description: 'Physics, engineering, math, and computer science students united by quantum curiosity',
+    },
+    {
+      icon: <Lightbulb size={32} />,
+      title: 'Making Complex Simple',
+      description: 'We make big ideas in quantum science feel a little more down-to-earth',
+    },
+    {
+      icon: <Target size={32} />,
+      title: 'Future Ready',
+      description: 'Growing as a community to prepare for the future of quantum technology',
+    },
+  ]
+
   const pillars = [
     {
-      icon: <Shield size={40} />,
+      icon: <BookOpen size={40} />,
       title: 'Education',
       description: 'Advancing quantum literacy through workshops, seminars, and hands-on experiences',
     },
@@ -32,7 +50,16 @@ export const MissionSection: React.FC = () => {
   ]
 
   return (
-    <section id="mission" className="py-24 bg-gradient-to-b from-primary-bg to-primary-dark/50">
+    <section id="mission" className="relative py-40 bg-gradient-to-br from-primary-bg via-primary-dark/90 to-primary-bg overflow-hidden border-t-2 border-accent/20">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,170,20,0.05),transparent_70%)]" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-light/5 rounded-full blur-3xl" />
+      
+      {/* Geometric shapes - Top Right and Bottom Left */}
+      <div className="absolute top-20 right-20 w-32 h-32 border border-accent/10 rotate-45 rounded-lg"></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 border border-accent-light/10 rotate-12 rounded-lg"></div>
+      
       <Container>
         <motion.div
           ref={ref}
@@ -40,43 +67,87 @@ export const MissionSection: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <H2 className="text-center mb-12">About Us</H2>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <H2 className="text-center mb-16 text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+              About Us
+            </H2>
+          </motion.div>
           
-          <div className="max-w-4xl mx-auto mb-16">
-            <P className="text-center text-lg md:text-xl leading-relaxed">
-              We're the Quantum Student Society (QSS) at Penn State, a group of students curious about all 
-              things quantum. From physics and engineering to math and computer science, we come from 
-              different backgrounds but share the same energy and enthusiasm to explore the quantum world 
-              together.
-            </P>
-            <P className="text-center text-lg md:text-xl leading-relaxed mt-6">
-              We host talks, lectures, and projects that make big ideas in quantum science feel a little more 
-              down-to-earth. QSS is a space to learn, collaborate, and connect, whether you're deep into 
-              research or just starting to wonder what "quantum" really means.
-            </P>
-            <P className="text-center text-lg md:text-xl leading-relaxed mt-6">
-              At the end of the day, we're here to grow as a community and help each other get ready for the 
-              future of quantum tech.
-            </P>
+          {/* Main Content */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center mb-16"
+            >
+              <P className="text-xl md:text-2xl leading-relaxed mb-8 font-light">
+                We're the <span className="text-accent font-semibold">Quantum Student Society (QSS)</span> at Penn State, 
+                a group of students curious about all things quantum. From physics and engineering to math and computer science, 
+                we come from different backgrounds but share the same energy and enthusiasm to explore the quantum world together.
+              </P>
+              
+              <P className="text-lg md:text-xl leading-relaxed mb-8 text-text-secondary">
+                We host talks, lectures, and projects that make big ideas in quantum science feel a little more down-to-earth. 
+                QSS is a space to learn, collaborate, and connect, whether you're deep into research or just starting to wonder 
+                what <span className="text-accent font-medium">"quantum"</span> really means.
+              </P>
+              
+              <P className="text-lg md:text-xl leading-relaxed text-text-secondary">
+                At the end of the day, we're here to grow as a community and help each other get ready for the 
+                <span className="text-accent font-medium"> future of quantum tech</span>.
+              </P>
+            </motion.div>
+
+            {/* Highlights Grid */}
+            <div className="grid md:grid-cols-3 gap-8 mb-20">
+              {highlights.map((highlight, index) => (
+                <motion.div
+                  key={highlight.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  className="text-center p-6 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/30 transition-all duration-300"
+                >
+                  <div className="inline-flex p-4 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl text-accent mb-4">
+                    {highlight.icon}
+                  </div>
+                  <H3 className="text-lg mb-3 text-accent">{highlight.title}</H3>
+                  <P className="text-sm text-text-secondary leading-relaxed">{highlight.description}</P>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <motion.div
-                key={pillar.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center p-8 bg-surface-glass backdrop-blur-sm border border-surface-border rounded-card hover:bg-surface-glass-hover transition-all duration-normal hover:shadow-card"
-              >
-                <div className="inline-flex justify-center items-center w-20 h-20 bg-surface-glass rounded-full mb-6 text-accent">
-                  {pillar.icon}
-                </div>
-                <H3 className="mb-4">{pillar.title}</H3>
-                <P className="text-text-secondary">{pillar.description}</P>
-              </motion.div>
-            ))}
-          </div>
+          {/* Mission Pillars */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <H3 className="text-center mb-12 text-2xl md:text-3xl font-bold text-accent">Our Mission Pillars</H3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pillars.map((pillar, index) => (
+                <motion.div
+                  key={pillar.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
+                  className="text-center p-8 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-sm border border-surface-border rounded-2xl hover:bg-surface-glass-hover transition-all duration-300 hover:shadow-glow hover:border-accent/30 group"
+                >
+                  <div className="inline-flex justify-center items-center w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
+                    {pillar.icon}
+                  </div>
+                  <H3 className="mb-4 group-hover:text-accent transition-colors duration-300">{pillar.title}</H3>
+                  <P className="text-text-secondary leading-relaxed">{pillar.description}</P>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </Container>
     </section>

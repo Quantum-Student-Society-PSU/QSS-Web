@@ -20,14 +20,17 @@ export const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ x: 10 }}
-      className="flex gap-6 p-6 bg-surface-glass backdrop-blur-sm border border-surface-border rounded-card hover:bg-surface-glass-hover transition-all duration-normal hover:shadow-card-hover"
+      className="group flex gap-6 p-6 bg-gradient-to-br from-surface-glass to-transparent backdrop-blur-md border border-surface-border rounded-2xl hover:border-accent/30 transition-all duration-300 hover:shadow-glow overflow-hidden relative"
     >
-      <div className="flex flex-col items-center justify-center min-w-[80px] p-4 bg-accent text-primary-bg rounded-xl">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      <div className="relative z-10 flex flex-col items-center justify-center min-w-[90px] p-4 bg-gradient-to-br from-accent to-accent-light text-primary-bg rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300">
         <span className="text-sm font-semibold">{event.date.month}</span>
         <span className="text-3xl font-bold">{event.date.day}</span>
       </div>
       
-      <div className="flex-1">
+      <div className="flex-1 relative z-10">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <div className="flex-1">
             <H4 className="mb-2">{event.title}</H4>

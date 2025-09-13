@@ -35,10 +35,10 @@ export const Header: React.FC = () => {
 
   return (
     <header className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
+      "fixed top-0 w-full z-50 transition-all duration-500",
       isScrolled 
-        ? "bg-primary-bg/95 backdrop-blur-md border-b border-surface-border" 
-        : "bg-transparent"
+        ? "bg-gradient-to-b from-primary-bg/95 to-primary-bg/80 backdrop-blur-lg border-b border-accent/20 shadow-lg" 
+        : "bg-gradient-to-b from-primary-bg/20 to-transparent backdrop-blur-sm"
     )}>
       <Container>
         <nav className="flex items-center justify-between py-4">

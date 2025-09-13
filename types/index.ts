@@ -6,6 +6,7 @@ export interface TeamMember {
   major?: string
   initials: string
   isAdvisor?: boolean
+  description?: string
 }
 
 export interface Event {

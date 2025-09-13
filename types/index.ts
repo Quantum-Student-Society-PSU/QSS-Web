@@ -4,7 +4,6 @@ export interface TeamMember {
   role: string
   department?: string
   major?: string
-  initials: string
   isAdvisor?: boolean
   description?: string
 }
@@ -34,7 +33,7 @@ export interface Activity {
   id: string
   title: string
   description: string
-  icon?: React.ReactNode
+  icon?: React.ComponentType<{ size?: number }>
 }
 
 export interface SocialLink {

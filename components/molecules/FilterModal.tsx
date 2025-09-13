@@ -125,11 +125,7 @@ export const FilterModal: React.FC<FilterModalProps> = ({
               {/* Scrollable Content */}
               <div 
                 ref={contentRef}
-                className="modal-scroll overflow-y-auto overscroll-contain px-6 py-6 max-h-[60vh] md:max-h-[50vh]"
-                style={{
-                  scrollbarWidth: 'thin',
-                  scrollbarColor: 'rgba(232, 170, 20, 0.3) transparent'
-                }}
+                className="modal-scroll overflow-y-auto overscroll-contain px-6 py-6 max-h-[60vh] md:max-h-[50vh] filter-modal-scrollbar"
               >
                 <P className="text-text-secondary mb-6 text-center">
                   Select an event type to filter the calendar, or view all events together.

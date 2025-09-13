@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+package-lock.json
 .pnp
 .pnp.js
 
@@ -85,7 +86,7 @@ out
 
 # Gatsby files
 .cache/
-public
+# public - removed to track static assets
 
 # Vuepress build output
 .vuepress/dist

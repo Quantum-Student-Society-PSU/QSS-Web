@@ -1,14 +1,17 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo } from 'react'
 import { Container } from '@/components/atoms/Container'
 import { Button } from '@/components/atoms/Button'
 import { H1, Lead } from '@/components/atoms/Typography'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { usePerformanceOptimization } from '@/hooks/usePerformanceOptimization'
+import { CONTENT } from '@/content/sections'
 
-export const HeroSection: React.FC = () => {
+const HeroSectionComponent: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const { getOptimalParticleCount } = usePerformanceOptimization()
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -65,11 +68,11 @@ export const HeroSection: React.FC = () => {
             >
               <H1 className="mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
                 <span className="inline-block bg-gradient-to-r from-accent via-accent-light to-indigo-400 bg-clip-text text-transparent animate-gradient bg-300%">
-                  Quantum
+                  {CONTENT.hero.title.split(' ')[0]}
                 </span>
                 <br />
                 <span className="inline-block bg-gradient-to-r from-accent-light to-accent bg-clip-text text-transparent">
-                  Student Society
+                  {CONTENT.hero.title.split(' ').slice(1).join(' ')}
                 </span>
               </H1>
             </motion.div>
@@ -79,9 +82,9 @@ export const HeroSection: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-xl sm:text-2xl md:text-3xl text-accent mb-4 font-light">Penn State University</p>
+              <p className="text-xl sm:text-2xl md:text-3xl text-accent mb-4 font-light">{CONTENT.hero.subtitle}</p>
               <Lead className="mb-8 text-base sm:text-lg md:text-xl max-w-2xl text-text-secondary">
-                A group of students curious about all things quantum — from physics and computing to the future of technology
+                {CONTENT.hero.description}
               </Lead>
             </motion.div>
             
@@ -102,7 +105,7 @@ export const HeroSection: React.FC = () => {
                   
                   {/* Button content */}
                   <div className="relative z-10 flex items-center">
-                    <span className="text-primary-bg group-hover:text-primary-dark transition-colors duration-200">Explore QSS</span>
+                    <span className="text-primary-bg group-hover:text-primary-dark transition-colors duration-200">{CONTENT.hero.cta.primary}</span>
                     <motion.span
                       className="inline-block ml-2 text-primary-bg group-hover:text-primary-dark"
                       animate={{ x: [0, 5, 0] }}
@@ -115,7 +118,7 @@ export const HeroSection: React.FC = () => {
               </Link>
               <Link href="#events">
                 <Button variant="secondary" size="lg" className="backdrop-blur-md">
-                  View Events
+                  {CONTENT.hero.cta.secondary}
                 </Button>
               </Link>
             </motion.div>
@@ -125,7 +128,7 @@ export const HeroSection: React.FC = () => {
 
       {/* Floating particles - responsive count */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(100)].map((_, i) => (
+        {[...Array(getOptimalParticleCount)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
             className="absolute w-1 h-1 bg-amber-400 rounded-full"
@@ -153,3 +156,5 @@ export const HeroSection: React.FC = () => {
     </section>
   )
 }
+
+export const HeroSection = memo(HeroSectionComponent)

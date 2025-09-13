@@ -45,7 +45,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({ activity, index }) =
             animate={isHovered ? { rotate: [0, -10, 10, 0] } : {}}
             transition={{ duration: 0.5 }}
           >
-            {activity.icon}
+            <activity.icon size={32} />
           </motion.div>
         )}
         

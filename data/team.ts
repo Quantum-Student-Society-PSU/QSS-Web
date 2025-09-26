@@ -7,6 +7,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'President',
     major: 'Computer Science',
     description: 'Guides QSS with vision and keeps the society moving toward new horizons.',
+    linkedin: 'https://www.linkedin.com/in/psinghalpa',
   },
   {
     id: '2',
@@ -14,6 +15,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Vice President',
     major: 'Engineering Science (Neural Engineering)',
     description: 'Bridges research and community, ensuring every member has a place to grow.',
+    linkedin: 'https://www.linkedin.com/in/vn-ragul',
   },
   {
     id: '3',
@@ -21,6 +23,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Treasurer',
     major: 'Architectural Engineering',
     description: 'Balances the books and makes sure our resources fuel impact.',
+    linkedin: 'https://www.linkedin.com/in/keeganrobinson',
   },
   {
     id: '4',
@@ -28,6 +31,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Logistics Head',
     major: 'Data Science',
     description: 'Keeps events and operations running smoothly, no matter the scale.',
+    linkedin: 'https://www.linkedin.com/in/anchita-mitra-025498301',
   },
   {
     id: '5',
@@ -35,6 +39,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Logistics Executive Member',
     major: 'Computer Science',
     description: 'Brings reliability and detail to the behind-the-scenes work.',
+    linkedin: 'https://www.linkedin.com/in/sahil-pardasani',
   },
   {
     id: '6',
@@ -42,6 +47,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Education Chair',
     major: 'Computer Science',
     description: 'Creates opportunities for members to learn and dive deeper into quantum.',
+    linkedin: 'https://www.linkedin.com/in/sanyam-agrawal-039894271',
   },
   {
     id: '7',
@@ -49,6 +55,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Education Executive Member',
     major: 'Computer Science & Physics',
     description: 'Supports educational initiatives with passion for both theory and practice.',
+    linkedin: 'https://www.linkedin.com/in/suryansh-sijwali',
   },
   {
     id: '8',
@@ -56,6 +63,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Media',
     major: 'Materials Science & Engineering',
     description: 'Captures and shares the QSS story through creative media.',
+    linkedin: 'https://www.linkedin.com/in/kenneth-carter-jr-a7b8051a9',
   },
   {
     id: '9',
@@ -63,6 +71,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Relations Chair',
     major: 'Material Science Engineering (Freshman)',
     description: 'Strengthens ties with peers and helps expand QSS connections.',
+    linkedin: '',
   },
   {
     id: '10',
@@ -70,6 +79,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Relations Chair',
     major: 'Math (Sophomore)',
     description: 'Brings a thoughtful perspective to networking and collaboration.',
+    linkedin: 'https://www.linkedin.com/in/gregory-kramer-140111325',
   },
   {
     id: '11',
@@ -77,6 +87,7 @@ export const OFFICERS: TeamMember[] = [
     role: 'Relations Committee',
     major: 'Electrical Engineering (Freshman)',
     description: 'Adds energy and drive to growing our community presence.',
+    linkedin: '',
   },
 ]
 
@@ -88,6 +99,7 @@ export const ADVISORS: TeamMember[] = [
     department: 'Physics',
     isAdvisor: true,
     description: 'A leader in theoretical condensed matter physics, Prof. Sofo brings deep insight into the quantum world and encourages our society to think big and stay curious.',
+    website: 'https://science.psu.edu/physics/people/jos13',
   },
   {
     id: '13',
@@ -96,6 +108,7 @@ export const ADVISORS: TeamMember[] = [
     department: 'Electrical Engineering',
     isAdvisor: true,
     description: 'An expert in nano-fabrication and experimental systems, Prof. Lopez provides invaluable guidance on connecting theory with cutting-edge applications.',
+    website: 'https://www.mri.psu.edu/mri/personnel-directory/ovl5064',
   },
 ]
 

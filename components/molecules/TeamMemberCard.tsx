@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { TeamMember } from '@/types'
 import { H4, P, Small } from '@/components/atoms/Typography'
 import { cn } from '@/lib/utils'
+import { Linkedin, Globe } from 'lucide-react'
 
 interface TeamMemberCardProps {
   member: TeamMember
@@ -37,9 +38,33 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, index })
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col">
         <div>
-          <H4 className="mb-2 text-lg group-hover:text-accent transition-colors duration-300">
-            {member.name}
-          </H4>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <H4 className="text-lg group-hover:text-accent transition-colors duration-300">
+              {member.name}
+            </H4>
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-accent transition-colors duration-200"
+                aria-label={`${member.name}'s LinkedIn profile`}
+              >
+                <Linkedin size={18} />
+              </a>
+            )}
+            {member.website && (
+              <a
+                href={member.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-accent transition-colors duration-200"
+                aria-label={`${member.name}'s website`}
+              >
+                <Globe size={18} />
+              </a>
+            )}
+          </div>
           
           <P className="font-semibold mb-2 text-accent text-sm">
             {member.role}

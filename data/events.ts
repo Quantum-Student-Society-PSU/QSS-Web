@@ -35,21 +35,12 @@ export const EVENT_TYPES: EventType[] = [
 
 export const UPCOMING_EVENTS: Event[] = [
   {
-    id: 'e1',
-    title: 'Weekly Lecture Series',
-    date: { month: 'Sep', day: '30' },
-    time: '6-7pm',
-    location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
-    type: 'collab',
-  },
-  {
     id: 'e2',
     title: 'General Body Meeting',
     date: { month: 'Oct', day: '03' },
-    time: 'TBD',
-    location: 'TBD',
-    description: 'General body meeting to discuss upcoming projects and club initiatives',
+    time: '6-7pm',
+    location: 'Westgate E202',
+    description: 'Going over recent innovations in Quantum as well as going over investing in quantum',
     type: 'gbm',
   },
   {
@@ -58,7 +49,7 @@ export const UPCOMING_EVENTS: Event[] = [
     date: { month: 'Oct', day: '07' },
     time: '6-7pm',
     location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
+    description: 'Join us for an engaging lecture on quantum computing fundamentals',
     type: 'collab',
   },
   {
@@ -67,7 +58,7 @@ export const UPCOMING_EVENTS: Event[] = [
     date: { month: 'Oct', day: '14' },
     time: '6-7pm',
     location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
+    description: 'Join us for an engaging lecture on quantum computing fundamentals',
     type: 'collab',
   },
   {
@@ -85,7 +76,7 @@ export const UPCOMING_EVENTS: Event[] = [
     date: { month: 'Oct', day: '21' },
     time: '6-7pm',
     location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
+    description: 'Join us for an engaging lecture on quantum computing fundamentals',
     type: 'collab',
   },
   {
@@ -103,7 +94,7 @@ export const UPCOMING_EVENTS: Event[] = [
     date: { month: 'Oct', day: '28' },
     time: '6-7pm',
     location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
+    description: 'Join us for an engaging lecture on quantum computing fundamentals',
     type: 'collab',
   },
   {
@@ -121,7 +112,7 @@ export const UPCOMING_EVENTS: Event[] = [
     date: { month: 'Nov', day: '04' },
     time: '6-7pm',
     location: 'TBD',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals and recent developments',
+    description: 'Join us for an engaging lecture on quantum computing fundamentals',
     type: 'collab',
   },
   {

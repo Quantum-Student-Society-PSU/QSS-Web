@@ -20,7 +20,7 @@ export const OFFICERS: TeamMember[] = [
   {
     id: '3',
     name: 'Keegan Robinson',
-    role: 'Treasurer',
+    role: 'Finance Chair',
     major: 'Architectural Engineering',
     description: 'Balances the books and makes sure our resources fuel impact.',
     linkedin: 'https://www.linkedin.com/in/keeganrobinson',
@@ -28,21 +28,13 @@ export const OFFICERS: TeamMember[] = [
   {
     id: '4',
     name: 'Anchita Mitra',
-    role: 'Logistics Head',
-    major: 'Data Science',
+    role: 'Logistics Chair',
+    major: 'Computational Data Science',
     description: 'Keeps events and operations running smoothly, no matter the scale.',
     linkedin: 'https://www.linkedin.com/in/anchita-mitra-025498301',
   },
   {
     id: '5',
-    name: 'Sahil Pardasani',
-    role: 'Logistics Executive Member',
-    major: 'Computer Science',
-    description: 'Brings reliability and detail to the behind-the-scenes work.',
-    linkedin: 'https://www.linkedin.com/in/sahil-pardasani',
-  },
-  {
-    id: '6',
     name: 'Sanyam Agrawal',
     role: 'Education Chair',
     major: 'Computer Science',
@@ -50,44 +42,55 @@ export const OFFICERS: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/sanyam-agrawal-039894271',
   },
   {
-    id: '7',
-    name: 'Suryansh Sijwali',
-    role: 'Education Executive Member',
-    major: 'Computer Science & Physics',
-    description: 'Supports educational initiatives with passion for both theory and practice.',
-    linkedin: 'https://www.linkedin.com/in/suryansh-sijwali',
-  },
-  {
-    id: '8',
+    id: '6',
     name: 'Kenneth Carter',
-    role: 'Media',
+    role: 'Media Chair',
     major: 'Materials Science & Engineering',
     description: 'Captures and shares the QSS story through creative media.',
     linkedin: 'https://www.linkedin.com/in/kenneth-carter-jr-a7b8051a9',
   },
   {
-    id: '9',
-    name: 'Rajiv Chandramouli',
+    id: '7',
+    name: 'Greg Kramer',
     role: 'Relations Chair',
-    major: 'Material Science Engineering (Freshman)',
-    description: 'Strengthens ties with peers and helps expand QSS connections.',
-    linkedin: '',
+    major: 'Math & Chem',
+    description: 'Brings a thoughtful perspective to networking and collaboration.',
+    linkedin: 'https://www.linkedin.com/in/gregory-kramer-140111325',
+  },
+]
+
+export const COMMITTEE: TeamMember[] = [
+  {
+    id: '8',
+    name: 'Sahil Pardasani',
+    role: 'Logistics Committee',
+    major: 'Computer Science',
+    description: 'Brings reliability and detail to the behind-the-scenes work.',
+    linkedin: 'https://www.linkedin.com/in/sahil-pardasani',
+  },
+  {
+    id: '9',
+    name: 'Suryansh Sijwali',
+    role: 'Education Committee',
+    major: 'Computer Science & Physics',
+    description: 'Supports educational initiatives with passion for both theory and practice.',
+    linkedin: 'https://www.linkedin.com/in/suryansh-sijwali',
   },
   {
     id: '10',
-    name: 'Greg Kramer',
-    role: 'Relations Chair',
-    major: 'Math (Sophomore)',
-    description: 'Brings a thoughtful perspective to networking and collaboration.',
-    linkedin: 'https://www.linkedin.com/in/gregory-kramer-140111325',
+    name: 'Rajiv Chandramouli',
+    role: 'Relations Committee',
+    major: 'Material Science Engineering',
+    description: 'Strengthens ties with peers and helps expand QSS connections.',
+    linkedin: 'https://www.linkedin.com/in/rajiv-chandramouli-083b47269/',
   },
   {
     id: '11',
     name: 'Shalin Patel',
     role: 'Relations Committee',
-    major: 'Electrical Engineering (Freshman)',
+    major: 'Electrical Engineering',
     description: 'Adds energy and drive to growing our community presence.',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/shalin-patel-ba06a3304/',
   },
 ]
 
@@ -112,4 +115,4 @@ export const ADVISORS: TeamMember[] = [
   },
 ]
 
-export const ALL_TEAM_MEMBERS = [...OFFICERS, ...ADVISORS]
+export const ALL_TEAM_MEMBERS = [...OFFICERS, ...COMMITTEE ,...ADVISORS]

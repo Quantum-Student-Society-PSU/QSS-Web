@@ -5,7 +5,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: '1',
     title: 'Workshops & Tutorials',
-    description: 'Hands-on sessions where members learn the basics (and beyond) of quantum computing, algorithms, and hardware.',
+    description: 'Hands-on sessions where members learn the basics (and beyond) of different applications of quantum science.',
     icon: BookOpen,
   },
   {

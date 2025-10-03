@@ -6,7 +6,7 @@ import { H2, H3, P } from '@/components/atoms/Typography'
 import { TeamMemberCard } from '@/components/molecules/TeamMemberCard'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { OFFICERS, ADVISORS } from '@/data'
+import { OFFICERS, ADVISORS, COMMITTEE } from '@/data'
 import { CONTENT } from '@/content/sections'
 
 export const TeamSection: React.FC = () => {
@@ -58,8 +58,40 @@ export const TeamSection: React.FC = () => {
             className="mb-16"
           >
             <H3 className="text-center mb-12 text-2xl md:text-3xl font-bold text-accent">Officers</H3>
+            {/* Officer Introduction */}
+            <div className="text-center mb-12 max-w-4xl mx-auto">
+              <P className="text-lg leading-relaxed text-text-secondary">
+                Our officers are responsible for <span className="text-accent font-medium">executing our mission</span> through effective leadership. They keep the club moving
+                and ensure all students have a resource for quantum science.
+              </P>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {OFFICERS.map((member, index) => (
+                <TeamMemberCard
+                  key={member.id}
+                  member={member}
+                  index={index}
+                />
+              ))}
+            </div>
+          </motion.div>
+          
+          {/*Committee Members section*/}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-16"
+          >
+            <H3 className="text-center mb-12 text-2xl md:text-3xl font-bold text-accent">Committee Members</H3>
+            {/* Committee Introduction */}
+            <div className="text-center mb-12 max-w-4xl mx-auto">
+              <P className="text-lg leading-relaxed text-text-secondary">
+                Our committee members are the <span className="text-accent font-medium">backbone of our club</span> and assist our officers with carrying out their duties.
+              </P>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {COMMITTEE.map((member, index) => (
                 <TeamMemberCard
                   key={member.id}
                   member={member}

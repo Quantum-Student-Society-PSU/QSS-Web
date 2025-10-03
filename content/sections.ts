@@ -5,7 +5,8 @@ export const CONTENT = {
     description: 'A group of students curious about all things quantum — from physics and computing to the future of technology',
     cta: {
       primary: 'Explore QSS',
-      secondary: 'View Events'
+      secondary: 'View Events',
+      connect: 'Connect with us',
     }
   },
   mission: {

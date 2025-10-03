@@ -121,6 +121,11 @@ const HeroSectionComponent: React.FC = () => {
                   {CONTENT.hero.cta.secondary}
                 </Button>
               </Link>
+              <Link href="https://campsite.bio/psuqss">
+                <Button variant="secondary" size="lg" className="backdrop-blur-md">
+                  {CONTENT.hero.cta.connect}
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

@@ -35,29 +35,11 @@ export const EVENT_TYPES: EventType[] = [
 
 export const UPCOMING_EVENTS: Event[] = [
   {
-    id: 'e7',
-    title: 'Speaker Event - Felix Beaudoin',
-    date: { month: 'Oct', day: '23' },
-    time: '8-9pm',
-    location: 'Willard 161',
-    description: 'Join us for a special presentation by Felix Beaudoin',
-    type: 'speaker',
-  },
-  {
-    id: 'e8',
-    title: 'Weekly Lecture Series',
-    date: { month: 'Oct', day: '28' },
-    time: '6-7pm',
-    location: 'Westgate E201',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals',
-    type: 'collab',
-  },
-  {
     id: 'e9',
     title: 'Speaker Event - Prof. Slava Rotkin',
     date: { month: 'Oct', day: '30' },
-    time: '6-7pm',
-    location: 'HUB 131',
+    time: '5-6pm',
+    location: 'Westgate E202',
     description: 'Professor Slava Rotkin will give a talk about MatSci in Quantum',
     type: 'speaker',
   },

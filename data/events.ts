@@ -35,29 +35,11 @@ export const EVENT_TYPES: EventType[] = [
 
 export const UPCOMING_EVENTS: Event[] = [
   {
-    id: 'e9',
-    title: 'Speaker Event - Prof. Slava Rotkin',
-    date: { month: 'Oct', day: '30' },
-    time: '5-6pm',
-    location: 'Westgate E202',
-    description: 'Professor Slava Rotkin will give a talk about MatSci in Quantum',
-    type: 'speaker',
-  },
-  {
-    id: 'e10',
-    title: 'Weekly Lecture Series',
-    date: { month: 'Nov', day: '04' },
-    time: '6-7pm',
-    location: 'Westgate E201',
-    description: 'Join us for an engaging lecture on quantum computing fundamentals',
-    type: 'collab',
-  },
-  {
     id: 'e11',
     title: 'Speaker Event - Prof. Imran Mirza',
     date: { month: 'Nov', day: '13' },
     time: '5:30-6:30pm',
-    location: 'TBD',
+    location: 'Wilard 165',
     description: 'Professor Imran Mirza will give a talk on Quantum Information Science and its connection to optics',
     type: 'speaker',
   },

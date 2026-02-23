@@ -19,22 +19,6 @@ export const OFFICERS: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Keegan Robinson',
-    role: 'Finance Chair',
-    major: 'Architectural Engineering',
-    description: 'Balances the books and makes sure our resources fuel impact.',
-    linkedin: 'https://www.linkedin.com/in/keeganrobinson',
-  },
-  {
-    id: '4',
-    name: 'Anchita Mitra',
-    role: 'Logistics Chair',
-    major: 'Computational Data Science',
-    description: 'Keeps events and operations running smoothly, no matter the scale.',
-    linkedin: 'https://www.linkedin.com/in/anchita-mitra-025498301',
-  },
-  {
-    id: '5',
     name: 'Sanyam Agrawal',
     role: 'Education Chair',
     major: 'Computer Science',
@@ -42,7 +26,7 @@ export const OFFICERS: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/sanyam-agrawal-039894271',
   },
   {
-    id: '6',
+    id: '4',
     name: 'Kenneth Carter',
     role: 'Media Chair',
     major: 'Materials Science & Engineering',
@@ -50,7 +34,7 @@ export const OFFICERS: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/kenneth-carter-jr-a7b8051a9',
   },
   {
-    id: '7',
+    id: '5',
     name: 'Greg Kramer',
     role: 'Relations Chair',
     major: 'Math & Chem',
@@ -60,14 +44,6 @@ export const OFFICERS: TeamMember[] = [
 ]
 
 export const COMMITTEE: TeamMember[] = [
-  {
-    id: '8',
-    name: 'Sahil Pardasani',
-    role: 'Logistics Committee',
-    major: 'Computer Science',
-    description: 'Brings reliability and detail to the behind-the-scenes work.',
-    linkedin: 'https://www.linkedin.com/in/sahil-pardasani',
-  },
   {
     id: '9',
     name: 'Suryansh Sijwali',

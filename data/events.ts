@@ -35,30 +35,12 @@ export const EVENT_TYPES: EventType[] = [
 
 export const UPCOMING_EVENTS: Event[] = [
   {
-    id: 'e11',
-    title: 'Speaker Event - Prof. Imran Mirza',
-    date: { month: 'Nov', day: '13' },
-    time: '5:30-6:30pm',
-    location: 'Wilard 165',
-    description: 'Professor Imran Mirza will give a talk on Quantum Information Science and its connection to optics',
-    type: 'speaker',
-  },
-  {
-    id: 'e13',
-    title: 'Speaker Event - Prof. Zhiqiang Mao',
-    date: { month: 'Nov', day: '27' },
-    time: 'TBD',
-    location: 'TBD',
-    description: 'Professor Zhiqiang Mao will give a talk about quantum materials',
-    type: 'speaker',
-  },
-  {
-    id: 'e14',
-    title: 'Speaker Event - Prof. Jun Zhu',
-    date: { month: 'Dec', day: '11' },
-    time: 'TBD',
-    location: 'TBD',
-    description: 'Professor Jun Zhu will speak about Quantum Information pathways on topological edge states',
-    type: 'speaker',
+    id: 'e1',
+    title: 'GBM - How Quantum Materials Supercharges Quantum Computing',
+    date: { month: 'Feb', day: '24' },
+    time: '6:30-8:00pm',
+    location: 'Chambers 104',
+    description: 'Professor Zhu will teach us how advancements in quantum materials are paving the way for quantum computing',
+    type: 'gbm',
   },
 ]

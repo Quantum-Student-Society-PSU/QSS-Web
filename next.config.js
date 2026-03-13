@@ -2,11 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   
-  // Performance optimizations
-  experimental: {
-    serverComponentsExternalPackages: [],
-  },
-  
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

@@ -3,7 +3,7 @@ import { useWindowSize } from './useWindowSize'
 
 export function usePerformanceOptimization() {
   const { isMobile } = useWindowSize()
-  const rafRef = useRef<number>()
+  const rafRef = useRef<number>(0)
 
   // Throttled function for expensive operations
   const throttle = useCallback(<T extends (...args: any[]) => any>(
